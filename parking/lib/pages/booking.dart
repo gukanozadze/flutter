@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:countdown/countdown.dart';
+
+
+
 
 class BookingPage extends StatelessWidget {
+
+  // Making HTTP request to firebase
   sendData(){
     final Map<String, dynamic> firebaseData = {
       'name': 'soso',
@@ -13,8 +19,8 @@ class BookingPage extends StatelessWidget {
         body: json.encode(firebaseData)).then((http.Response response){
           print(json.decode(response.body));
         });
-
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
