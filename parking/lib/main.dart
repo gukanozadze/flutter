@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.red[400],
-        primaryColor: Colors.red,
+        primarySwatch: Colors.red,
         accentColor: Colors.red,
 
         // Default Texts

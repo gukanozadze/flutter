@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             builder: (BuildContext context, Widget child) {
               return Text(
                 timerString,
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Colors.greenAccent, fontWeight: FontWeight.bold),
               );
             });
         controller.reverse(
@@ -50,69 +50,71 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
   void showModal() {
     showModalBottomSheet(
-        context: context,
-        builder: (context) {
-          return Container(
-            color: Color(0xff6D2727), // Outer Color
-            height: 300.0, // Height of container
+      context: context,
+      builder: (context) {
+        return Container(
+          color: Color(0xff6D2727), // Outer Color
 
-            child: Container(
-              decoration: BoxDecoration(
-                  color: Colors.red,
-                  borderRadius: BorderRadius.only(
-                    topLeft: const Radius.circular(15),
-                    topRight: const Radius.circular(15),
-                  )),
-              child: Column(
-                children: <Widget>[
-                  Container(
-                    height: 50.0,
-                  ),
-                  Center(
-                    child: Text(
-                      'ნამდვილათ გსურთ დაჯავშნა?',
-                      style: TextStyle(fontSize: 20.0),
-                    ),
-                  ),
-                  Container(
-                    height: 50.0,
-                  ),
-                  Center(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        RaisedButton(
-                          onPressed: () {
-                            startTimer();
-                            Navigator.pop(context);
-                          },
-                          color: Colors.green,
-                          child: Text(
-                            'კი',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                        ),
-                        Container(
-                          width: 50.0,
-                        ),
-                        RaisedButton(
-                          color: Colors.red[400],
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          child: Text(
-                            'არა',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
+          height: 250.0, // Height of container
+          child: Container(
+            decoration: BoxDecoration( // Radius Decorator
+              color: Colors.red,
+              borderRadius: BorderRadius.only(
+                topLeft: const Radius.circular(20),
+                topRight: const Radius.circular(20),
               ),
             ),
-          );
-        });
+            child: Column(
+              children: <Widget>[
+                Container(
+                  height: 50.0,
+                ),
+                Center(
+                  child: Text(
+                    'ნამდვილად გსურთ დაჯავშნა?',
+                    style: TextStyle(fontSize: 20.0),
+                  ),
+                ),
+                Container(
+                  height: 50.0,
+                ),
+                Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      RaisedButton(
+                        onPressed: () {
+                          startTimer();
+                          Navigator.pop(context);
+                        },
+                        color: Colors.green,
+                        child: Text(
+                          'კი',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                      Container(
+                        width: 50.0,
+                      ),
+                      RaisedButton(
+                        color: Colors.red[400],
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        child: Text(
+                          'არა',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+        );
+      },
+    );
   }
 
   @override
@@ -140,7 +142,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               padding: EdgeInsets.all(10.0),
             ),
             Text(
-              '15',
+              '13',
               style: TextStyle(fontSize: 35.0, fontWeight: FontWeight.bold),
             ),
             Container(
