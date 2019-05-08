@@ -137,7 +137,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text('თავისუფალი ადგილები'),
+            Text('YLE'),
             Container(
               padding: EdgeInsets.all(10.0),
             ),

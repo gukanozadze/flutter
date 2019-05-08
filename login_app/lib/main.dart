@@ -7,7 +7,7 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final appTitle = 'Login Title';
-    // TODO: implement build
+
     return MaterialApp(
       title: appTitle,
       home: Scaffold(
