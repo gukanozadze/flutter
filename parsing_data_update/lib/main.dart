@@ -7,6 +7,9 @@ void main() async {
   List _data = await getJson();
   print(_data[0]['id']);
 
+  String name = 'koshka';
+
+
   for (var i = 0; i < _data.length; i++) {
     print("Data $i = ${_data[i]['title']}");
   }
