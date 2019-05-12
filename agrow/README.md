@@ -1,6 +1,10 @@
-# agrow
+# AGROW
 
-A new Flutter project.
+Hackathon Mobile Application
+
+Team - Guka Nozadze, Davit Koshkeli, Giorgi Khunashvili
+
+How to use : TBD
 
 ## Getting Started
 
